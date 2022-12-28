@@ -1,13 +1,10 @@
 package com.dekanat.dekanat.server.service;
 
-import com.dekanat.dekanat.server.entity.Lesson;
-import com.dekanat.dekanat.server.entity.Mark;
 import com.dekanat.dekanat.server.entity.PersonalData;
 import com.dekanat.dekanat.server.entity.StudentCard;
 import com.dekanat.dekanat.server.repository.PersonalDataRepository;
 import com.dekanat.dekanat.server.repository.StudentCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
