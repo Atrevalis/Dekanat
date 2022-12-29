@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class Navigation {
     private JLabel navigate;
@@ -20,5 +21,12 @@ public class Navigation {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         navigate.setText("Choose you ...");
+
+
+        ActionListener KafedraListener = e -> {
+            new KafedraList(minDimension, frame);
+            frame.setVisible(false);
+        };
+        button2.addActionListener(KafedraListener);
     }
 }
