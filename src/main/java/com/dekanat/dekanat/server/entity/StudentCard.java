@@ -9,7 +9,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "\"StudentCard\"")
+@Table(name = "\"studentCard\"")
 public class StudentCard {
     @Id
     @Column(name = "\"numberSB\"", nullable = false)

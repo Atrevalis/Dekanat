@@ -1,9 +1,9 @@
-package com.dekanat.dekanat.server.requestbody;
+package GUI.requestbody;
 
 public class LoginBody {
 
     String login;
-    String pswrd;
+    String password;
 
     public String getLogin() {
         return login;
@@ -14,11 +14,11 @@ public class LoginBody {
     }
 
     public String getPassword() {
-        return pswrd;
+        return password;
     }
 
     public void setPassword(String password) {
-        this.pswrd = password;
+        this.password = password;
     }
 
 }

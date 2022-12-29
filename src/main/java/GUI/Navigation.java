@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 
 public class Navigation {
     private JLabel navigate;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
+    private JButton administrationButton;
+    private JButton departmentButton;
+    private JButton studentButton;
     private JPanel rootPanel;
 
     public Navigation(Dimension minDimension, JFrame parent) {
@@ -20,13 +20,25 @@ public class Navigation {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        navigate.setText("Choose you ...");
+        // navigate.setText("Choose you ...");
 
 
-        ActionListener KafedraListener = e -> {
-            new KafedraList(minDimension, frame);
+        ActionListener departmentListener = e -> {
+            new DepartmentList(minDimension, frame);
             frame.setVisible(false);
         };
-        button2.addActionListener(KafedraListener);
+        departmentButton.addActionListener(departmentListener);
+
+        ActionListener administrationListener = e -> {
+            new DepartmentList(minDimension, frame);
+            frame.setVisible(false);
+        };
+        administrationButton.addActionListener(administrationListener);
+
+        ActionListener studentListener = e -> {
+            new DepartmentList(minDimension, frame);
+            frame.setVisible(false);
+        };
+        studentButton.addActionListener(studentListener);
     }
 }

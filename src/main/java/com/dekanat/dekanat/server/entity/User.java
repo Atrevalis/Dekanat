@@ -3,11 +3,11 @@ package com.dekanat.dekanat.server.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "\"User\"")
+@Table(name = "users", schema = "public")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "\"Id\"", nullable = false)
+    @Column(name = "\"id\"", nullable = false)
     private Integer id;
 
     @Column(name = "login", length = Integer.MAX_VALUE)
@@ -19,7 +19,7 @@ public class User {
     @Column(name = "role")
     private Integer role;
 
-    @Column(name = "\"FIO\"", length = Integer.MAX_VALUE)
+    @Column(name = "fio", length = Integer.MAX_VALUE)
     private String fio;
 
     public User(Integer id, String login, String pswrd, Integer role, String fio) {
@@ -30,9 +30,7 @@ public class User {
         this.fio = fio;
     }
 
-    public User() {
-
-    }
+    public User() {}
 
     public Integer getId() {
         return id;

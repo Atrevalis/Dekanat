@@ -1,5 +1,7 @@
 package GUI;
 
+import com.dekanat.dekanat.server.Utils.Security;
+
 import java.awt.*;
 
 public class MainGUI {
@@ -7,6 +9,8 @@ public class MainGUI {
         Dimension minDimension = new Dimension();
         minDimension.height = 640;
         minDimension.width = 480;
+
+
 //        new Navigation( minDimension, null);
         new LoginForm( minDimension, null);
     }

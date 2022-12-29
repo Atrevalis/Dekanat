@@ -44,10 +44,12 @@ public class UserService {
     }
 
     public List<User> findAllUser(){
+
         return userRepository.findAll();
     }
 
     public List<User> findAllByLogin(String login){
+
         return userRepository.findAllByLogin(login);
     }
 }
