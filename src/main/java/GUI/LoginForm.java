@@ -36,6 +36,4 @@ public class LoginForm {
         loginButton.addActionListener(loginListener);
 
     }
-
-
 }
