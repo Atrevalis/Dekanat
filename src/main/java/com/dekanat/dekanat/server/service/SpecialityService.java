@@ -45,4 +45,12 @@ public class SpecialityService {
     public List<Speciality> findAllByDepartment(String departmentName){
         return specialityRepository.findAllByDepartment(departmentRepository.findAllByName(departmentName).get(0));
     }
+
+    public Speciality findByName(String name){
+        return specialityRepository.findAllByName(name).get(0);
+    }
+
+    public Speciality findById(String name){
+       return specialityRepository.findById(name).get();
+    }
 }

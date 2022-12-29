@@ -1,5 +1,6 @@
 package com.dekanat.dekanat.server.entity;
 
+import com.dekanat.dekanat.server.requestbody.MarkBody;
 import jakarta.persistence.*;
 
 @Entity
@@ -21,9 +22,13 @@ public class Mark {
     @JoinColumn(name = "\"studentNumber\"")
     private StudentCard studentNumber;
 
+    public Mark() {
+    }
+
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
@@ -39,6 +44,13 @@ public class Mark {
 
     public Lesson getLesson() {
         return lesson;
+    }
+
+    public Mark(Integer id, Integer mark, Lesson lesson, StudentCard studentNumber) {
+        this.id = id;
+        this.mark = mark;
+        this.lesson = lesson;
+        this.studentNumber = studentNumber;
     }
 
     public void setLesson(Lesson lesson) {

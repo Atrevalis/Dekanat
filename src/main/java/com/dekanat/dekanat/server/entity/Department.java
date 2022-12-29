@@ -19,6 +19,14 @@ public class Department {
     @OneToMany(mappedBy = "department")
     private Set<Speciality> specialities = new LinkedHashSet<>();
 
+    public Department(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Department() {
+    }
+
     public Integer getId() {
         return id;
     }

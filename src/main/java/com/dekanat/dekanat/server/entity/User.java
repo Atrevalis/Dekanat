@@ -22,6 +22,18 @@ public class User {
     @Column(name = "\"FIO\"", length = Integer.MAX_VALUE)
     private String fio;
 
+    public User(Integer id, String login, String pswrd, Integer role, String fio) {
+        this.id = id;
+        this.login = login;
+        this.pswrd = pswrd;
+        this.role = role;
+        this.fio = fio;
+    }
+
+    public User() {
+
+    }
+
     public Integer getId() {
         return id;
     }

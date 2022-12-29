@@ -40,8 +40,23 @@ public class Lesson {
     @OneToMany(mappedBy = "lesson")
     private Set<Mark> marks = new LinkedHashSet<>();
 
+    public Lesson() {
+
+    }
+
     public Integer getId() {
         return id;
+    }
+
+    public Lesson(Integer id, String name, Integer lectureH, Integer practiseH, Integer laboratoryH, Integer control, String index, Semester semester) {
+        this.id = id;
+        this.name = name;
+        this.lectureH = lectureH;
+        this.practiseH = practiseH;
+        this.laboratoryH = laboratoryH;
+        this.control = control;
+        this.index = index;
+        this.semester = semester;
     }
 
     public void setId(Integer id) {

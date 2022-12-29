@@ -1,5 +1,7 @@
 package com.dekanat.dekanat.server.entity;
 
+import com.dekanat.dekanat.server.Utils.Time;
+import com.dekanat.dekanat.server.requestbody.StudentCardBody;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -38,6 +40,18 @@ public class StudentCard {
     @OneToMany(mappedBy = "studentNumber")
     private Set<Mark> marks = new LinkedHashSet<>();
 
+    public StudentCard(StudentCardBody studentCardBody, Speciality specialityNumber) {
+        this.id = studentCardBody.getId();
+        this.form = studentCardBody.getForm();
+        this.endDate = Time.getLocalDate(studentCardBody.getEndDate());
+        this.startDate = Time.getLocalDate(studentCardBody.getStartDate());
+        this.finance = studentCardBody.getFinance();
+        this.groupNumber = studentCardBody.getGroupNumber();
+        this.specialityNumber = specialityNumber;
+    }
+    public StudentCard() {
+
+    }
     public Integer getId() {
         return id;
     }

@@ -31,12 +31,26 @@ public class PersonalData {
     @JoinColumn(name = "\"studentNumber\"")
     private StudentCard studentNumber;
 
+    public PersonalData() {
+
+    }
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public PersonalData(String id, String fio, String citizenship, String pipn, LocalDate birthDate, Integer documentType, StudentCard studentNumber) {
+        this.id = id;
+        this.fio = fio;
+        this.citizenship = citizenship;
+        this.pipn = pipn;
+        this.birthDate = birthDate;
+        this.documentType = documentType;
+        this.studentNumber = studentNumber;
     }
 
     public String getFio() {

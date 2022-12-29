@@ -58,8 +58,11 @@ public class PlanService {
         planRepository.delete(plan);
     }
 
-    public List<Plan> findAllByPlan(String specialityName){
+    public List<Plan> findAllBySpeciality(String specialityName){
         return planRepository.findAllBySpecialityNumber(specialityRepository.findAllByName(specialityName).get(0));
     }
 
+    public Plan findById(int id){
+        return planRepository.findAllById(id).get(0);
+    }
 }

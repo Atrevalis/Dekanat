@@ -29,6 +29,10 @@ public class Plan {
     @OneToMany(mappedBy = "planNumber")
     private Set<Semester> semesters = new LinkedHashSet<>();
 
+    public Plan() {
+
+    }
+
     public Integer getId() {
         return id;
     }
@@ -77,4 +81,11 @@ public class Plan {
         this.semesters = semesters;
     }
 
+    public Plan(Integer id, Integer hours, LocalDate startDate, LocalDate endDate, Speciality specialityNumber) {
+        this.id = id;
+        this.hours = hours;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.specialityNumber = specialityNumber;
+    }
 }

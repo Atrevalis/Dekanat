@@ -57,4 +57,7 @@ public class SemesterService {
         return semesterRepository.findAllByPlanNumber(planRepository.findAllById(planId).get(0));
     }
 
+    public Semester findById(int id){
+        return semesterRepository.findById(id).get();
+    }
 }

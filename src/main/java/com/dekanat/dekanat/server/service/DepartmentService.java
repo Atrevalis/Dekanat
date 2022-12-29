@@ -37,4 +37,8 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
+    public Department findByName(String name){
+        return departmentRepository.findAllByName(name).get(0);
+    }
+
 }

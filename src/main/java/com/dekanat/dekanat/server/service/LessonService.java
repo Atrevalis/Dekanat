@@ -56,6 +56,9 @@ public class LessonService {
     public List<Lesson> findAllLesson(int semesterId){
         return lessonRepository.findAllBySemester(semesterRepository.findAllById(semesterId).get(0));
     }
+    public Lesson findByName(String name){
+        return lessonRepository.findAllByName(name).get(0);
+    }
 
     static class Control{
 

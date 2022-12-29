@@ -66,4 +66,8 @@ public class StudentCardService {
     public List<StudentCard> findAllBySpeciality(String specialityName){
         return studentCardRepository.findAllBySpecialityNumber(specialityRepository.findAllByName(specialityName).get(0));
     }
+
+    public StudentCard findById(int id){
+        return studentCardRepository.findById(id).get();
+    }
 }

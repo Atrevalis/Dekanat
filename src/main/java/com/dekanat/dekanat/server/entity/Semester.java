@@ -17,6 +17,14 @@ public class Semester {
     @Column(name = "number", nullable = false)
     private Integer number;
 
+    public Semester(Integer id, Integer number, LocalDate startDate, LocalDate endDate, Plan planNumber) {
+        this.id = id;
+        this.number = number;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.planNumber = planNumber;
+    }
+
     @Column(name = "\"startDate\"")
     private LocalDate startDate;
 
@@ -29,6 +37,10 @@ public class Semester {
 
     @OneToMany(mappedBy = "semester")
     private Set<Lesson> lessons = new LinkedHashSet<>();
+
+    public Semester() {
+
+    }
 
     public Integer getId() {
         return id;

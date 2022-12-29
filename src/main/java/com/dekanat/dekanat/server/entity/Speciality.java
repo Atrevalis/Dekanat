@@ -26,6 +26,10 @@ public class Speciality {
     @OneToMany(mappedBy = "specialityNumber")
     private Set<Plan> plans = new LinkedHashSet<>();
 
+    public Speciality() {
+
+    }
+
     public String getId() {
         return id;
     }
@@ -66,4 +70,9 @@ public class Speciality {
         this.plans = plans;
     }
 
+    public Speciality(String id, String name, Department department) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+    }
 }
