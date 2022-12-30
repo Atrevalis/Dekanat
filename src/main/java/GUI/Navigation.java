@@ -40,13 +40,13 @@ public class Navigation {
 
         ActionListener departmentListener = e -> {
             frame.setVisible(false);
-            new AdministrationList(minDimension, frame);
+            new DepartmentList(minDimension, frame);
         };
         departmentButton.addActionListener(departmentListener);
 
         ActionListener administrationListener = e -> {
             if (Temporary.role == 1) {
-                new DepartmentList(minDimension, frame);
+                new AdministrationList(minDimension, frame);
                 frame.setVisible(false);
             } else {
                 navigate.setText("Недостаточно прав");
