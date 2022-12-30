@@ -6,6 +6,10 @@ public class PlanBody {
 
     private int oldId;
 
+    public PlanBody() {
+
+    }
+
     public int getOldId() {
         return oldId;
     }

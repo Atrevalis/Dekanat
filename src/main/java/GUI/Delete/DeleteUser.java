@@ -1,7 +1,10 @@
 package GUI.Delete;
 
+import GUI.Navigation;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class DeleteUser {
     private JButton noButton;
@@ -19,5 +22,10 @@ public class DeleteUser {
 
         sureLabel.setText("Вы уверены?");
 
+        ActionListener dListener = e -> {
+
+            frame.setVisible(false);
+
+        };
     }
 }

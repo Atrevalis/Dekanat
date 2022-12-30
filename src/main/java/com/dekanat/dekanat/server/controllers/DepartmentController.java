@@ -1,12 +1,16 @@
 package com.dekanat.dekanat.server.controllers;
 
+import GUI.Utils.JsonHelper;
 import com.dekanat.dekanat.server.entity.Department;
 import com.dekanat.dekanat.server.requestbody.DepartmentBody;
+import com.dekanat.dekanat.server.requestbody.LoginBody;
 import com.dekanat.dekanat.server.service.DepartmentService;
+import com.google.gson.Gson;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 
@@ -16,7 +20,11 @@ public class DepartmentController {
     DepartmentService departmentService;
 
     @PostMapping("/addDepartment")
-    public void createDepartment(@RequestBody DepartmentBody departmentBody , HttpServletResponse response){
+    public void createDepartment(@RequestBody byte[] stream, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        String json = JsonHelper.replacer(new String(stream, "UTF-8"));
+
+        DepartmentBody departmentBody = new Gson().fromJson(json, DepartmentBody.class);
 
         departmentService.createDepartment(departmentBody.getName());
 
@@ -25,7 +33,12 @@ public class DepartmentController {
     }
 
     @PostMapping("/deleteDepartment")
-    public void deleteDepartment(@RequestBody DepartmentBody departmentBody, HttpServletResponse response){
+    public void deleteDepartment(@RequestBody byte[] stream, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        String json = JsonHelper.replacer(new String(stream, "UTF-8"));
+
+        DepartmentBody departmentBody = new Gson().fromJson(json, DepartmentBody.class);
+
         Department department = new Department(departmentBody.getId(),departmentBody.getName());
         departmentService.deleteDepartment(department);
         response.setStatus(HttpServletResponse.SC_OK);
