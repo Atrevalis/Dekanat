@@ -16,7 +16,7 @@ public class UpdSpec {
 
 
     public UpdSpec(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Добавить пользователя");
+        JFrame frame = new JFrame("Изменить параметры специальности");
         frame.setSize(380, 320);
         frame.setContentPane(panel1);
         frame.setLocationRelativeTo(null);

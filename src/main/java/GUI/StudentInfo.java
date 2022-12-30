@@ -37,7 +37,7 @@ public class StudentInfo {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new Navigation(minDimension, frame);
+            new StudentsList(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);

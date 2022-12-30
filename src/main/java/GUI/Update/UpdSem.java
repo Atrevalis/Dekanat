@@ -13,9 +13,11 @@ public class UpdSem {
     private JTextField NameField;
     private JButton cancelButton;
     private JPanel panel1;
+    private JTextField textField1;
+    private JTextField textField2;
 
     public UpdSem(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Добавить пользователя");
+        JFrame frame = new JFrame("Изменение параметров семестра");
         frame.setSize(380, 320);
         frame.setContentPane(panel1);
         frame.setLocationRelativeTo(null);

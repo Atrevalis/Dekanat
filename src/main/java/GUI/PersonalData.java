@@ -1,6 +1,8 @@
 package GUI;
 
+import GUI.Add.AddPersonalData;
 import GUI.Delete.DeleteUser;
+import GUI.Update.UpdPersonalData;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
@@ -53,9 +55,19 @@ public class PersonalData {
         };
         deleteButton.addActionListener(deleteListener);
 
+        ActionListener addListener = e -> {
+            new AddPersonalData(minDimension, frame);
+        };
+        addButton.addActionListener(addListener);
+
+        ActionListener updateListener = e -> {
+            new UpdPersonalData(minDimension, frame);
+        };
+        updateButton.addActionListener(updateListener);
+
         ActionListener nextListener = e -> {
             frame.setVisible(false);
-            new SpecialityList(minDimension, frame);
+            new LessonData(minDimension, frame);
 
         };
         nextButton.addActionListener(nextListener);

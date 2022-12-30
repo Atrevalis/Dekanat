@@ -19,7 +19,7 @@ public class UpdUser {
     private JTextField NameField;
 
     public UpdUser(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Добавить пользователя");
+        JFrame frame = new JFrame("Изменить пользователя");
         frame.setSize(380, 320);
         frame.setContentPane(panel1);
         frame.setLocationRelativeTo(null);

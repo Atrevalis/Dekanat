@@ -54,7 +54,7 @@ public class UpdPersonalData {
     }
 
     public UpdPersonalData(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Добавить пользователя");
+        JFrame frame = new JFrame("Изменение пользователя");
         frame.setSize(380, 320);
         frame.setContentPane(panel1);
         frame.setLocationRelativeTo(null);
