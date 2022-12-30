@@ -12,10 +12,9 @@ public class DepartmentList {
     private JButton addButton;
     private JButton updateButton;
     private JButton deleteButton;
-
-    private JButton openButton;
     private JList list1;
     private JButton backButton;
+    private JButton openButton;
 
 
     public DepartmentList(Dimension minDimension, JFrame parent) {

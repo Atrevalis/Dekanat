@@ -43,5 +43,9 @@ public class AdministrationList {
         };
         backButton.addActionListener(backListener);
 
+        ActionListener addListener = e -> {
+            new AddUser(minDimension, frame);
+        };
+        addButton.addActionListener(addListener);
     }
 }

@@ -14,7 +14,8 @@ public class Navigation {
     private JButton departmentButton;
     private JButton studentButton;
     private JPanel rootPanel;
-    private JButton studentsButton;
+
+//    private JButton studentsButton;
 
     public int role;
 
@@ -51,6 +52,9 @@ public class Navigation {
                 frame.setVisible(false);
             }else {
                 navigate.setText("Недостаточно прав");
+// Потом убрать 2
+                new AdministrationList(minDimension, frame);
+                frame.setVisible(false);
             }
         };
         administrationButton.addActionListener(administrationListener);
