@@ -19,14 +19,6 @@ public class Navigation {
 
     public int role;
 
-    public void setRole(int role) {
-        this.role = role;
-    }
-
-    public int getRole() {
-        return role;
-    }
-
     public Navigation(Dimension minDimension, JFrame parent) {
 
         JFrame frame = new JFrame("Меню навигации");
