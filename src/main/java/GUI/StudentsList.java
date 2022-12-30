@@ -58,6 +58,13 @@ public class StudentsList {
         };
         nextButton.addActionListener(nextListener);
 
+        ActionListener nextListener = e -> {
+            frame.setVisible(false);
+            new StudentInfo(minDimension, frame);
+
+        };
+
+
     }
 
     {
