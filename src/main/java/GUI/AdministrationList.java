@@ -28,6 +28,7 @@ public class AdministrationList {
     private JList list1;
     private JButton backButton;
     private JButton openButton;
+    private JTable table1;
 
 
     public AdministrationList(Dimension minDimension, JFrame parent) throws IOException {
