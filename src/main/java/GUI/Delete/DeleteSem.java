@@ -5,6 +5,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class DeleteSem {
     private JButton noButton;
@@ -21,7 +22,11 @@ public class DeleteSem {
         frame.setVisible(true);
 
         sureLabel.setText("Вы уверены?");
+        ActionListener noListener = e -> {
+            frame.setVisible(false);
 
+        };
+        noButton.addActionListener(noListener);
     }
 
 

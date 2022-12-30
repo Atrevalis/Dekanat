@@ -6,6 +6,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class UserInfo {
     private JPanel panel1;
@@ -43,7 +44,11 @@ public class UserInfo {
 
         ActionListener nextListener = e -> {
             frame.setVisible(false);
-            new AdministrationList(minDimension, frame);
+            try {
+                new AdministrationList(minDimension, frame);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
 
         };
         nextButton.addActionListener(nextListener);

@@ -89,7 +89,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Снилс"/>
+          <text value="СНИЛС"/>
         </properties>
       </component>
       <component id="b1fc2" class="javax.swing.JLabel">
@@ -99,7 +99,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Лабораторные часы"/>
+          <text value="ФИО"/>
         </properties>
       </component>
       <component id="3551" class="javax.swing.JLabel">

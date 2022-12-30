@@ -5,6 +5,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class DeleteSpeciality {
 
@@ -23,7 +24,11 @@ public class DeleteSpeciality {
         frame.setVisible(true);
 
         sureLabel.setText("Вы уверены?");
+        ActionListener noListener = e -> {
+            frame.setVisible(false);
 
+        };
+        noButton.addActionListener(noListener);
     }
 
     {

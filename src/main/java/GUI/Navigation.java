@@ -40,11 +40,13 @@ public class Navigation {
         ActionListener administrationListener = e -> {
             try {
                 if (Temporary.role == 1) {
-                    new AdministrationList(minDimension, frame);
                     frame.setVisible(false);
+                    new AdministrationList(minDimension, frame);
                 } else {
                     navigate.setText("Недостаточно прав");
+                    //убрать 2 строки вниз
                     frame.setVisible(false);
+                    new AdministrationList(minDimension, frame);
                 }
             } catch (IOException ex) {
                 throw new RuntimeException(ex);

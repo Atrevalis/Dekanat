@@ -20,7 +20,7 @@ public class LessonList {
 
 
     public LessonList(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Специальности");
+        JFrame frame = new JFrame("Предметы");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);
@@ -52,6 +52,27 @@ public class LessonList {
 
         };
         nextButton.addActionListener(nextListener);
+
+        ActionListener addListener = e -> {
+            frame.setVisible(false);
+            new SpecialityList(minDimension, frame);
+
+        };
+        addButton.addActionListener(addListener);
+
+        ActionListener updListener = e -> {
+            frame.setVisible(false);
+            new SpecialityList(minDimension, frame);
+
+        };
+        updateButton.addActionListener(updListener);
+
+        ActionListener delListener = e -> {
+            frame.setVisible(false);
+            new SpecialityList(minDimension, frame);
+
+        };
+        deleteButton.addActionListener(delListener);
     }
 
     {

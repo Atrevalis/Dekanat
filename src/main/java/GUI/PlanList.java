@@ -16,6 +16,7 @@ public class PlanList {
     private JList list1;
     private JButton backButton;
     private JButton openButton;
+    private JButton nextButton;
 
 
     public PlanList(Dimension minDimension, JFrame parent) {
@@ -40,10 +41,17 @@ public class PlanList {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new Navigation(minDimension, frame);
+            new DepartmentList(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);
+
+        ActionListener nextListener = e -> {
+            frame.setVisible(false);
+            new SemList(minDimension, frame);
+
+        };
+        nextButton.addActionListener(nextListener);
 
     }
 

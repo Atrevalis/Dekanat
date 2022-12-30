@@ -13,6 +13,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+
 import java.io.IOException;
 
 public class DeletePlan {
@@ -32,7 +33,11 @@ public class DeletePlan {
         frame.setVisible(true);
 
         sureLabel.setText("Вы уверены?");
+        ActionListener noListener = e -> {
+            frame.setVisible(false);
 
+        };
+        noButton.addActionListener(noListener);
 
         ActionListener listListener = e -> {
             frame.setVisible(false);

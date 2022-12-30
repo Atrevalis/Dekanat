@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.Add.AddUser;
+import GUI.Update.UpdUser;
 import GUI.Utils.HttpURLConnection;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
@@ -58,6 +59,18 @@ public class AdministrationList {
             new AddUser(minDimension, frame);
         };
         addButton.addActionListener(addListener);
+
+        ActionListener updListener = e -> {
+            new UpdUser(minDimension, frame);
+        };
+        updateButton.addActionListener(updListener);
+
+        ActionListener delListener = e -> {
+            frame.setVisible(false);
+            new SpecialityList(minDimension, frame);
+
+        };
+        deleteButton.addActionListener(delListener);
     }
 
 

@@ -22,7 +22,7 @@ public class PersonalData {
 
 
     public PersonalData(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Личные данные");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);

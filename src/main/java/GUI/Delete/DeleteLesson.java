@@ -55,6 +55,12 @@ public class DeleteLesson {
 
         yesButton.addActionListener(listListener);
 
+        ActionListener noListener = e -> {
+            frame.setVisible(false);
+
+        };
+        noButton.addActionListener(noListener);
+
     }
 
     {

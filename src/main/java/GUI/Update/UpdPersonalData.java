@@ -6,6 +6,7 @@ import com.intellij.uiDesigner.core.Spacer;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class UpdPersonalData {
     private JButton acceptButton;
@@ -51,4 +52,20 @@ public class UpdPersonalData {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
+    public UpdPersonalData(Dimension minDimension, JFrame parent) {
+        JFrame frame = new JFrame("Добавить пользователя");
+        frame.setSize(380, 320);
+        frame.setContentPane(panel1);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
+
+        ActionListener cancelListener = e -> {
+            frame.setVisible(false);
+
+        };
+        cancelButton.addActionListener(cancelListener);
+    }
+
 }
