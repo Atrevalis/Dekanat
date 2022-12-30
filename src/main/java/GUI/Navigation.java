@@ -41,7 +41,7 @@ public class Navigation {
 
         ActionListener departmentListener = e -> {
             frame.setVisible(false);
-            new DepartmentList(minDimension, frame);
+            new AdministrationList(minDimension, frame);
         };
         departmentButton.addActionListener(departmentListener);
 
@@ -57,7 +57,7 @@ public class Navigation {
 
         ActionListener studentListener = e -> {
             frame.setVisible(false);
-            new DepartmentList(minDimension, frame);
+            new StudentsList(minDimension, frame);
         };
         studentButton.addActionListener(studentListener);
     }

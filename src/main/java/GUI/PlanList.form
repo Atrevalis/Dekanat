@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.StudentsList">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.PlanList">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
@@ -67,7 +67,7 @@
           <text value="Назад"/>
         </properties>
       </component>
-      <component id="a3335" class="javax.swing.JButton" binding="openButton">
+      <component id="a665" class="javax.swing.JButton" binding="openButton">
         <constraints>
           <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

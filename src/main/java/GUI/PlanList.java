@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class StudentsList {
+public class PlanList {
     private JPanel panel1;
     private JButton addButton;
     private JButton updateButton;
@@ -14,7 +14,7 @@ public class StudentsList {
     private JButton openButton;
 
 
-    public StudentsList(Dimension minDimension, JFrame parent) {
+    public PlanList(Dimension minDimension, JFrame parent) {
         JFrame frame = new JFrame();
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
