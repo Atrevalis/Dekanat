@@ -20,11 +20,9 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="b2dc7" class="javax.swing.JTextArea" binding="a123TextArea" default-binding="true">
+              <component id="86d5b" class="javax.swing.JList" binding="list1" default-binding="true">
                 <constraints/>
-                <properties>
-                  <text value="123"/>
-                </properties>
+                <properties/>
               </component>
             </children>
           </scrollpane>
