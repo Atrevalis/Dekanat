@@ -1,10 +1,9 @@
 package com.dekanat.dekanat.server.entity;
 
-import com.dekanat.dekanat.server.requestbody.MarkBody;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "\"Mark\"")
+@Table(name = "\"mark\"")
 public class Mark {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

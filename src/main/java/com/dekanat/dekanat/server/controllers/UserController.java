@@ -1,19 +1,23 @@
 package com.dekanat.dekanat.server.controllers;
 
+import GUI.Utils.JsonHelper;
 import com.dekanat.dekanat.server.Utils.Time;
 import com.dekanat.dekanat.server.entity.Plan;
 import com.dekanat.dekanat.server.entity.Speciality;
 import com.dekanat.dekanat.server.entity.User;
+import com.dekanat.dekanat.server.requestbody.LoginBody;
 import com.dekanat.dekanat.server.requestbody.PlanBody;
 import com.dekanat.dekanat.server.requestbody.SpecialityBody;
 import com.dekanat.dekanat.server.requestbody.UserBody;
 import com.dekanat.dekanat.server.service.PlanService;
 import com.dekanat.dekanat.server.service.SpecialityService;
 import com.dekanat.dekanat.server.service.UserService;
+import com.google.gson.Gson;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.util.List;
 @RestController
@@ -24,8 +28,12 @@ public class UserController {
 
 
     @PostMapping("/addUser")
-    public void create(@RequestBody UserBody userBody, HttpServletResponse response) throws ParseException {
+    public void create(@RequestBody byte[] stream, HttpServletResponse response) throws UnsupportedEncodingException {
+        String json = JsonHelper.replacer(new String(stream, "UTF-8"));
+
+        UserBody userBody = new Gson().fromJson(json, UserBody.class);
         userService.createUser(userBody.getLogin(), userBody.getPswrd(), userBody.getRole(), userBody.getFio());
+        response.setStatus(HttpServletResponse.SC_ACCEPTED);
     }
 
     @PostMapping("/deleteUser")

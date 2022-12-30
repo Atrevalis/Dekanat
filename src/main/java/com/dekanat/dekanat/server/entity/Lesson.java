@@ -1,14 +1,12 @@
 package com.dekanat.dekanat.server.entity;
 
-import com.dekanat.dekanat.server.entity.Mark;
-import com.dekanat.dekanat.server.entity.Semester;
 import jakarta.persistence.*;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "\"Lesson\"")
+@Table(name = "\"lesson\"")
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

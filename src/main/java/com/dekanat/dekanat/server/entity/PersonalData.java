@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "\"PersonalData\"")
+@Table(name = "\"personalData\"")
 public class PersonalData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
