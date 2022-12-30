@@ -29,6 +29,8 @@ public class LoginForm {
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
 
+
+
         loginLabel.setText("Please, insert login");
         passwordLabel.setText("Please, insert password");
         loginButton.setText("Login");
@@ -55,12 +57,13 @@ public class LoginForm {
                 throw new RuntimeException(ex);
             }
             try {
-                i = HttpURLConnection.sendPOST(json, "/login");
+                Temporary.role = Integer.parseInt(HttpURLConnection.sendPOSTWaitAns(json, "/login"));
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
 
-            if (i == 202) {
+            if (Temporary.role == 1 || Temporary.role == 2) {
+                new Navigation(minDimension, frame);
                 frame.setVisible(false);
                 new Navigation(minDimension, frame);
             } else {

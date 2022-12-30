@@ -17,30 +17,26 @@ public class HttpURLConnection {
     private static final String POST_PARAMS = "userName=Pankaj";
 
 
-    public static int sendGET() throws IOException {
+    public static String sendGET() throws IOException {
         URL obj = new URL(GET_URL);
         java.net.HttpURLConnection con = (java.net.HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
-       // con.setRequestProperty("User-Agent", USER_AGENT); int responseCode =
-     return con.getResponseCode();/*
-        System.out.println("GET Response Code :: " + responseCode);
-        if (responseCode == HttpURLConnection.HTTP_OK) { // success
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
+        // con.setRequestProperty("User-Agent", USER_AGENT); int responseCode =
+        con.getResponseCode();
+        //System.out.println("GET Response Code :: " + responseCode);
+        // if (responseCode == HttpURLConnection.HTTP_OK) { // success
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
 
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
 
-// print result
-            System.out.println(response.toString());
-        } else {
-            System.out.println("GET request did not work.");
-        }*/
-
+        return response.toString();
     }
+
 
     public static int sendPOST(String json,String method) throws IOException {
         URL obj = new URL(POST_URL+method);
@@ -53,5 +49,29 @@ public class HttpURLConnection {
         os.close();
 
         return  con.getResponseCode();
+    }
+
+    public static String sendPOSTWaitAns(String json,String method) throws IOException {
+        URL obj = new URL(POST_URL+method);
+        java.net.HttpURLConnection con = (java.net.HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("POST");
+        con.setDoOutput(true);
+        OutputStream os = con.getOutputStream();
+        os.write(json.getBytes());
+        os.flush();
+        os.close();
+
+        con.getResponseCode();
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+
+        return response.toString();
     }
 }

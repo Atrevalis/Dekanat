@@ -1,6 +1,7 @@
 package com.dekanat.dekanat.server.controllers;
 
 import GUI.Utils.JsonHelper;
+import com.dekanat.dekanat.server.entity.Department;
 import com.google.gson.Gson;
 import com.dekanat.dekanat.server.Utils.Security;
 import com.dekanat.dekanat.server.entity.User;
@@ -44,7 +45,8 @@ public class AuthController {
 //         response.setStatus(400);
    //  }
         @PostMapping("/login")
-    public void login(@RequestBody byte[] stream, HttpServletResponse response) throws UnsupportedEncodingException {
+    public @ResponseBody
+        int login(@RequestBody byte[] stream, HttpServletResponse response) throws UnsupportedEncodingException {
             String json = JsonHelper.replacer(new String(stream, "UTF-8"));
 
             LoginBody loginBody = new Gson().fromJson(json, LoginBody.class);
@@ -57,5 +59,6 @@ public class AuthController {
         } else{
             response.setStatus(HttpServletResponse.SC_NOT_ACCEPTABLE);
         }
+        return user.getRole();
     }
 }
