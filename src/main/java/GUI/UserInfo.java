@@ -4,16 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class StudentInfo {
-
+public class UserInfo {
     private JPanel panel1;
     private JList list1;
     private JButton backButton;
     private JButton nextButton;
 
 
-    public StudentInfo(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Информация о студенте");
+    public UserInfo(Dimension minDimension, JFrame parent) {
+        JFrame frame = new JFrame("Информация о пользователе");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);
@@ -41,7 +40,7 @@ public class StudentInfo {
 
         ActionListener nextListener = e -> {
             frame.setVisible(false);
-            new PersonalData(minDimension, frame);
+            new AdministrationList(minDimension, frame);
 
         };
         nextButton.addActionListener(nextListener);

@@ -16,7 +16,7 @@ public class SemList {
 
 
     public SemList(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame("Специальности");
+        JFrame frame = new JFrame("Список семестров");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);

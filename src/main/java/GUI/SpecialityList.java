@@ -48,7 +48,7 @@ public class SpecialityList {
 
         ActionListener nextListener = e -> {
             frame.setVisible(false);
-            new SemList(minDimension, frame);
+            new PlanList(minDimension, frame);
 
         };
         nextButton.addActionListener(nextListener);

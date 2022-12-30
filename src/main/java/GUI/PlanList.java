@@ -19,7 +19,7 @@ public class PlanList {
 
 
     public PlanList(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Список планов");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);
