@@ -7,6 +7,7 @@ import com.intellij.uiDesigner.core.Spacer;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class Navigation {
     private JLabel navigate;
@@ -37,14 +38,16 @@ public class Navigation {
         departmentButton.addActionListener(departmentListener);
 
         ActionListener administrationListener = e -> {
-            if (Temporary.role == 1) {
-                new AdministrationList(minDimension, frame);
-                frame.setVisible(false);
-            } else {
-                navigate.setText("Недостаточно прав");
-// Потом убрать 2
-                new AdministrationList(minDimension, frame);
-                frame.setVisible(false);
+            try {
+                if (Temporary.role == 1) {
+                    new AdministrationList(minDimension, frame);
+                    frame.setVisible(false);
+                } else {
+                    navigate.setText("Недостаточно прав");
+                    frame.setVisible(false);
+                }
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
             }
         };
         administrationButton.addActionListener(administrationListener);

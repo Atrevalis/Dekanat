@@ -17,8 +17,8 @@ public class HttpURLConnection {
     private static final String POST_PARAMS = "userName=Pankaj";
 
 
-    public static String sendGET() throws IOException {
-        URL obj = new URL(GET_URL);
+    public static String sendGET(String add) throws IOException {
+        URL obj = new URL(GET_URL+add);
         java.net.HttpURLConnection con = (java.net.HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
         // con.setRequestProperty("User-Agent", USER_AGENT); int responseCode =

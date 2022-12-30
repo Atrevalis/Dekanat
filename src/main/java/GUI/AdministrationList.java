@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.Add.AddUser;
+import GUI.Utils.HttpURLConnection;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
@@ -8,6 +9,7 @@ import com.intellij.uiDesigner.core.Spacer;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class AdministrationList {
 
@@ -21,7 +23,7 @@ public class AdministrationList {
     private JButton openButton;
 
 
-    public AdministrationList(Dimension minDimension, JFrame parent) {
+    public AdministrationList(Dimension minDimension, JFrame parent) throws IOException {
 
         JFrame frame = new JFrame();
         frame.setMinimumSize(minDimension);
@@ -34,6 +36,10 @@ public class AdministrationList {
         JList list = new JList();
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane scrollableList = new JScrollPane(list);
+
+        String json = HttpURLConnection.sendGET("/listUser");
+
+
 
         ActionListener listListener = e -> {
             frame.setVisible(false);

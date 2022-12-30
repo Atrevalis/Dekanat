@@ -16,11 +16,11 @@ public class AddLesson {
     private JTextField NameField;
     private JButton cancelButton;
     private JPanel panel1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
+    private JTextField lecture;
+    private JTextField lab;
+    private JTextField index;
+    private JTextField control;
+    private JTextField prac;
 
     public AddLesson(Dimension minDimension, JFrame parent) {
         JFrame frame = new JFrame("Добавить пользователя");
@@ -33,11 +33,11 @@ public class AddLesson {
 
             LessonBody lessonBody = new LessonBody();
             lessonBody.setName(NameField.getText());
-            lessonBody.setControl();
-            lessonBody.setLectureH();
-            lessonBody.setLaboratoryH();
-            lessonBody.setIndex();
-            lessonBody.setPractiseH();
+            lessonBody.setControl(Integer.parseInt(control.getText()));
+            lessonBody.setLectureH(lecture.getWidth());
+            lessonBody.setLaboratoryH(Integer.parseInt(lab.getText()));
+            lessonBody.setIndex(index.getText());
+            lessonBody.setPractiseH(Integer.parseInt(prac.getText()));
 
             String json = "";
             try {

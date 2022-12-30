@@ -35,7 +35,7 @@ public class DeleteLesson {
             frame.setVisible(false);
 
             LessonBody lessonBody = new LessonBody();
-            lessonBody.setId(Temporary.lesson);
+            lessonBody.setId(Temporary.lessonId);
 
             String json = "";
             try {
