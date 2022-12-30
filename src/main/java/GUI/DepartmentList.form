@@ -70,6 +70,14 @@
           <text value="Открыть"/>
         </properties>
       </component>
+      <component id="d9558" class="javax.swing.JButton" binding="nextButton">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Специальности"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

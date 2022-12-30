@@ -15,10 +15,11 @@ public class DepartmentList {
     private JList list1;
     private JButton backButton;
     private JButton openButton;
+    private JButton nextButton;
 
 
     public DepartmentList(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Список кафедр");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);
@@ -44,6 +45,14 @@ public class DepartmentList {
 
         };
         backButton.addActionListener(backListener);
+
+        ActionListener nextListener = e -> {
+            frame.setVisible(false);
+            new SpecialityList(minDimension, frame);
+
+        };
+        nextButton.addActionListener(nextListener);
+
 
     }
 

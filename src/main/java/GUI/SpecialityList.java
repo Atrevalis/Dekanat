@@ -16,10 +16,11 @@ public class SpecialityList {
     private JList list1;
     private JButton backButton;
     private JButton openButton;
+    private JButton nextButton;
 
 
     public SpecialityList(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Специальности");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(panel1);
@@ -40,10 +41,17 @@ public class SpecialityList {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new Navigation(minDimension, frame);
+            new DepartmentList(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);
+
+        ActionListener nextListener = e -> {
+            frame.setVisible(false);
+            new SemList(minDimension, frame);
+
+        };
+        nextButton.addActionListener(nextListener);
 
     }
 

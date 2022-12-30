@@ -29,7 +29,7 @@ public class Navigation {
 
     public Navigation(Dimension minDimension, JFrame parent) {
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Меню навигации");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
         frame.setContentPane(rootPanel);

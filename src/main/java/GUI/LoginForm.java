@@ -25,7 +25,7 @@ public class LoginForm {
 
 
     public LoginForm(Dimension minDimension, JFrame parent) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Авторизация");
         frame.setMinimumSize(minDimension);
         frame.setSize(640, 480);
 
