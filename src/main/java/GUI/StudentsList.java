@@ -1,8 +1,6 @@
 package GUI;
 
-import com.intellij.uiDesigner.core.GridConstraints;
-import com.intellij.uiDesigner.core.GridLayoutManager;
-import com.intellij.uiDesigner.core.Spacer;
+import GUI.Delete.DeleteStudent;
 
 import javax.swing.*;
 import java.awt.*;

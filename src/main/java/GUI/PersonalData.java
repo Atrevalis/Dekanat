@@ -1,5 +1,7 @@
 package GUI;
 
+import GUI.Delete.DeleteUser;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
