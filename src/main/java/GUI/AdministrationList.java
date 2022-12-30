@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.Add.AddUser;
+import GUI.Delete.DeleteUser;
 import GUI.Update.UpdUser;
 import GUI.Utils.HttpURLConnection;
 import GUI.Utils.JsonHelper;
@@ -89,7 +90,7 @@ public class AdministrationList {
 
         ActionListener delListener = e -> {
             frame.setVisible(false);
-            new SpecialityList(minDimension, frame);
+            new DeleteUser(minDimension, frame);
 
         };
         deleteButton.addActionListener(delListener);
