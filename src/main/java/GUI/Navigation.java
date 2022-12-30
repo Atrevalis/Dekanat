@@ -10,6 +10,7 @@ public class Navigation {
     private JButton departmentButton;
     private JButton studentButton;
     private JPanel rootPanel;
+    private JButton studentsButton;
 
     public Navigation(Dimension minDimension, JFrame parent) {
         JFrame frame = new JFrame();
@@ -24,20 +25,20 @@ public class Navigation {
 
 
         ActionListener departmentListener = e -> {
-            new DepartmentList(minDimension, frame);
             frame.setVisible(false);
+            new DepartmentList(minDimension, frame);
         };
         departmentButton.addActionListener(departmentListener);
 
         ActionListener administrationListener = e -> {
-            new DepartmentList(minDimension, frame);
             frame.setVisible(false);
+            new DepartmentList(minDimension, frame);
         };
         administrationButton.addActionListener(administrationListener);
 
         ActionListener studentListener = e -> {
-            new DepartmentList(minDimension, frame);
             frame.setVisible(false);
+            new DepartmentList(minDimension, frame);
         };
         studentButton.addActionListener(studentListener);
     }

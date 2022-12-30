@@ -38,6 +38,12 @@ public class LoginForm {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         ActionListener loginListener = e -> {
+
+            //потом убрать
+            frame.setVisible(false);
+            new Navigation(minDimension, frame);
+//            frame.setVisible(false);
+
             UserBody userBody = new UserBody();
             userBody.setLogin(loginField.getText());
             userBody.setPswrd(String.valueOf(passwordField.getPassword()));
@@ -55,9 +61,8 @@ public class LoginForm {
             }
 
             if (i == 202) {
-                new Navigation(minDimension, frame);
-
                 frame.setVisible(false);
+                new Navigation(minDimension, frame);
             } else {
                 frame.setVisible(false);
             }

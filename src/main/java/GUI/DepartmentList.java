@@ -27,17 +27,18 @@ public class DepartmentList {
         JScrollPane scrollableList = new JScrollPane(list);
 
         ActionListener listListener = e -> {
-            new Navigation(minDimension, frame);
             frame.setVisible(false);
+            new Navigation(minDimension, frame);
         };
 
-//        scrollableList.
+        // scrollableList.
 
-//        ActionListener backListener = e -> {
-//            new Navigation(minDimension, frame);
-//            frame.setVisible(false);
-//        };
-//        backButton.addActionListener(backListener);
+        ActionListener backListener = e -> {
+            frame.setVisible(false);
+            new Navigation(minDimension, frame);
+
+        };
+        backButton.addActionListener(backListener);
 
     }
 
