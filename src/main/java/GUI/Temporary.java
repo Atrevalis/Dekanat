@@ -11,4 +11,5 @@ public class Temporary {
     public static int markId;
     public static int numberSB;
     public static String serialDoc;
+    public static String userId;
 }

@@ -1,12 +1,19 @@
 package GUI.Delete;
 
 import GUI.Navigation;
+import GUI.Temporary;
+import GUI.Utils.HttpURLConnection;
+import GUI.Utils.JsonHelper;
+import GUI.requestbody.DepartmentBody;
+import GUI.requestbody.UserBody;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class DeleteUser {
     private JButton noButton;
@@ -25,6 +32,22 @@ public class DeleteUser {
         sureLabel.setText("Вы уверены?");
         ActionListener noListener = e -> {
             frame.setVisible(false);
+            UserBody userBody = new UserBody();
+            userBody.setId(Integer.parseInt(Temporary.userId));
+
+
+            String json = "";
+            try {
+                json = JsonHelper.UserToJSON(userBody);
+            } catch (JsonProcessingException ex) {
+                throw new RuntimeException(ex);
+            }
+            try {
+                HttpURLConnection.sendPOST(json, "/deleteDepartment");
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            new Navigation(minDimension, frame);
         };
         ActionListener dListener = e -> {
 
