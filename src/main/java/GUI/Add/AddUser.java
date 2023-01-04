@@ -1,5 +1,6 @@
 package GUI.Add;
 
+import GUI.AdministrationList;
 import GUI.Utils.HttpURLConnection;
 import GUI.Utils.JsonHelper;
 import GUI.requestbody.UserBody;
@@ -9,6 +10,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
@@ -36,6 +38,18 @@ public class AddUser {
 
         };
         cancelButton.addActionListener(cancelListener);
+
+// удалить, хотел потестить кнопку добавить в лист
+
+//        ActionListener acceptListener = e -> {
+//            String login = LoginField.getText();
+//            new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//
+//                }
+//            }
+
 
         ActionListener acceptListener = e -> {
             String login = LoginField.getText();
