@@ -1,11 +1,18 @@
 package GUI.Delete;
 
+import GUI.Navigation;
+import GUI.Temporary;
+import GUI.Utils.HttpURLConnection;
+import GUI.Utils.JsonHelper;
+import GUI.requestbody.DepartmentBody;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class DeleteRate {
 
@@ -24,6 +31,14 @@ public class DeleteRate {
         frame.setVisible(true);
 
         sureLabel.setText("Вы уверены?");
+
+        ActionListener listListener = e -> {
+            frame.setVisible(false);
+
+        };
+
+        yesButton.addActionListener(listListener);
+
         ActionListener noListener = e -> {
             frame.setVisible(false);
 

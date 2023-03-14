@@ -34,7 +34,7 @@ public class AddDepartment {
         };
 
         ActionListener acceptListener = e -> {
-
+            frame.setVisible(false);
             DepartmentBody departmentBody = new DepartmentBody();
             departmentBody.setName(NameField.getText());
             String json = "";

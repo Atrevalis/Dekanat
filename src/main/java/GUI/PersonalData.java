@@ -45,7 +45,7 @@ public class PersonalData {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new Navigation(minDimension, frame);
+            new StudentInfo(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);

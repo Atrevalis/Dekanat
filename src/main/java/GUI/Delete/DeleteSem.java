@@ -22,6 +22,14 @@ public class DeleteSem {
         frame.setVisible(true);
 
         sureLabel.setText("Вы уверены?");
+
+        ActionListener listListener = e -> {
+            frame.setVisible(false);
+
+        };
+
+        yesButton.addActionListener(listListener);
+
         ActionListener noListener = e -> {
             frame.setVisible(false);
 

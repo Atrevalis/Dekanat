@@ -1,11 +1,16 @@
 package GUI.Add;
 
+import GUI.Utils.HttpURLConnection;
+import GUI.Utils.JsonHelper;
+import GUI.requestbody.LessonBody;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class AddPersonalData {
     private JPanel panel1;
@@ -25,7 +30,13 @@ public class AddPersonalData {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
+        ActionListener acceptListener = e -> {
 
+            frame.setVisible(false);
+
+
+        };
+        acceptButton.addActionListener(acceptListener);
         ActionListener cancelListener = e -> {
             frame.setVisible(false);
 

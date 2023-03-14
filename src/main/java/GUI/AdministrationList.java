@@ -37,7 +37,7 @@ public class AdministrationList extends JFrame {
 
     public AdministrationList(Dimension minDimension, JFrame parent) throws IOException {
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Administration List");
 
 
         frame.setMinimumSize(minDimension);
@@ -63,7 +63,7 @@ public class AdministrationList extends JFrame {
 //            dlm.add(0, user.getLogin());
 //        }
         frame.setLayout(new FlowLayout());
-        String[] data1 = {"11111", "22222", "33333", "44444"};
+        String[] data1 = {"111112", "22222", "33333", "44444"};
         list = new JList(data1);
         scrollableList = new JScrollPane(list);
         list.setLayoutOrientation(JList.VERTICAL);

@@ -43,7 +43,7 @@ public class SemList {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new SpecialityList(minDimension, frame);
+            new PlanList(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);

@@ -13,7 +13,7 @@ public class UpdSpec {
     private JTextField NameField;
     private JButton cancelButton;
     private JPanel panel1;
-
+    private JTextField textField1;
 
     public UpdSpec(Dimension minDimension, JFrame parent) {
         JFrame frame = new JFrame("Изменить параметры специальности");

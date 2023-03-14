@@ -28,6 +28,13 @@ public class DeleteStudent {
 
         };
         noButton.addActionListener(noListener);
+
+        ActionListener listListener = e -> {
+            frame.setVisible(false);
+
+        };
+
+        yesButton.addActionListener(listListener);
     }
 
     {

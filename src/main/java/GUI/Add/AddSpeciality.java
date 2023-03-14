@@ -22,7 +22,13 @@ public class AddSpeciality {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
+        ActionListener acceptListener = e -> {
 
+            frame.setVisible(false);
+
+
+        };
+        acceptButton.addActionListener(acceptListener);
         ActionListener cancelListener = e -> {
             frame.setVisible(false);
 

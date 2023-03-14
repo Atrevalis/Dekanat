@@ -47,7 +47,7 @@ public class PlanList {
 
         ActionListener backListener = e -> {
             frame.setVisible(false);
-            new DepartmentList(minDimension, frame);
+            new SpecialityList(minDimension, frame);
 
         };
         backButton.addActionListener(backListener);
